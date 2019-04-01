@@ -13,9 +13,9 @@ namespace CarInsuranceMVC.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            using (InsuranceQuotesEntities db = new InsuranceQuotesEntities())
+            using (InsuranceQuotesEntities1 db = new InsuranceQuotesEntities1())
             {
-                var applications = db.C_Applications.ToList();
+                var applications = db.Applications.ToList();
                 var applicationsVms = new List<QuotesVm>();
                 foreach (var application in applications)
                 {

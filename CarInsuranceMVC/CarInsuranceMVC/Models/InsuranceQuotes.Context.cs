@@ -13,10 +13,10 @@ namespace CarInsuranceMVC.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class InsuranceQuotesEntities : DbContext
+    public partial class InsuranceQuotesEntities1 : DbContext
     {
-        public InsuranceQuotesEntities()
-            : base("name=InsuranceQuotesEntities")
+        public InsuranceQuotesEntities1()
+            : base("name=InsuranceQuotesEntities1")
         {
         }
     
@@ -26,5 +26,6 @@ namespace CarInsuranceMVC.Models
         }
     
         public virtual DbSet<C_Applications> C_Applications { get; set; }
+        public virtual DbSet<Application> Applications { get; set; }
     }
 }

@@ -131,6 +131,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Application.cs">
+      <DependentUpon>InsuranceQuotes.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -171,8 +174,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\InsuranceQuotes.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>InsuranceQuotes.Context.cs</LastGenOutput>
       <DependentUpon>InsuranceQuotes.edmx</DependentUpon>
+      <LastGenOutput>InsuranceQuotes.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\InsuranceQuotes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -25,9 +25,9 @@ namespace CarInsuranceMVC.Controllers
             }
             else
             {
-                using (InsuranceQuotesEntities db = new InsuranceQuotesEntities())
+                using (InsuranceQuotesEntities1 db = new InsuranceQuotesEntities1())
                 {
-                    var application = new C_Applications();
+                    var application = new Application();
                     application.FirstName = firstName;
                     application.LastName = lastName;
                     application.EmailAddress = emailAddress;
@@ -40,7 +40,7 @@ namespace CarInsuranceMVC.Controllers
                     application.CoverageType = coverageType;
                     application.Quote = QuoteTotal(dateOfBirth, carYear, carMake, carModel, speedingTickets, dui, coverageType);
 
-                    db.C_Applications.Add(application);
+                    db.Applications.Add(application);
                     db.SaveChanges();
                 }
             }
