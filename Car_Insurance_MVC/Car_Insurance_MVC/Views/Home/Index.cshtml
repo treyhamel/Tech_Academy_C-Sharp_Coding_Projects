@@ -1,0 +1,53 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-12 col-lg-8 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Welcome to ACME auto insurance. Please input your information for a quote.</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Apply", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-12">
+                    Date of Birth:
+                    <input name=”DateOfBirth” type="date" class=”form-control” />
+                </div>
+                <div class="form-group col-md-12">
+                    Car Year:
+                    <input name="CarYear" type="number" class="form-control" min="1950" max="2020" placeholder="Car_Year" />
+                </div>
+                <div class="form-group col-md-12">
+                    Car Make:
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                </div>
+                <div class="form-group col-md-12">
+                    Car Model:
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                </div>
+                <div class="form-group col-md-12">
+                    How many speeding tickets have you had?
+                    <input name="SpeedingTickets" type="number" class="form-control" min="0" max="10" />
+                </div>
+                <div class="form-group col-md-12">
+                    Have you ever had a DUI?
+                    <input name="DUI" type="text" class="form-control" />
+                </div>
+                <div class="form-group col-md-12">
+                    Coverage Type: Liability or Full
+                    <input name="CoverageType" type="text" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
